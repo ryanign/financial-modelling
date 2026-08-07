@@ -18,18 +18,18 @@ FV = PV \times (1 + r)^n
 ```
 
 Where:
-- $PV$ = Present Value, the amount you start with today
-- $r$  = interest rate per period (e.g. 0.08 for 8%)
-- $n$  = number of periods (years, months, etc.)
-- $FV$ = Future Value, the amount you end up with
+- `$PV$` = Present Value, the amount you start with today
+- `$r$`  = interest rate per period (e.g. 0.08 for 8%)
+- `$n$`  = number of periods (years, months, etc.)
+- `$FV$` = Future Value, the amount you end up with
 
 **Real-world example:**
 A geothermal company sets aside $100,000 today into a reserve fund
 earning 8% annually, to cover future decommissioning costs in 3 years.
 How much will that fund be worth?
 
-```
-FV = \$100,000 * (1.00 + 0.08)^3
+```math
+FV = \$100,000 \times (1.00 + 0.08)^3
    = \$125,971.00
 ```
 
@@ -38,6 +38,6 @@ The company will have ~$126k available, enough to plan against.
 **Analogy:**
 This is exponential growth, the same equation as radioactive ingrowth of a daughter isotope,
 or compound interest in a saving account. 
-The rate $r$ plays the role of growth constant
+The rate `$r$` plays the role of growth constant `$\lambda$`
 
 
