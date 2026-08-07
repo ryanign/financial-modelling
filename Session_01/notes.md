@@ -41,8 +41,59 @@ future_value(pv=100_000, r=0.08, n=3)
 # returns: 125971.20
 ```
 
-$\rightarrows$ Function: `future_value(pv, r, n)`
+$\rightarrow$ Function: `future_value(pv, r, n)`
 
 ---
+
+## 2. Present Value (PV)
+
+**Concept**
+The reverse of FV. Present Value answers:
+*"What is a future cash flow worth in today's money?"*
+
+$$PV = \frac{FV}{(1 + r)^{n}}$$
+
+The interest rate $r$ used here is called the **discount rate**.
+The process is called **discounting**.
+
+**Real-world example:**
+A carbon credit project is contractually guaranteed to pay $500,000 in 5 years.
+An investor wants to buy that contract today.
+If the discount rate is 7%, what should they pay?
+
+$$PV = \frac{500{,}000}{(1.00 + 0.07)^{5}} = \$356{,}493$$
+
+Paying more than ~$365k for that contract means the investor is not earning their required 7% return.
+
+**Analogy:**
+Discounting is mathematically identical to radioactive decay.
+A future cash flow "decays" in value as you move it backward in time.
+The discount rate is the decay constant: higher rate, faster decay, lower present value.
+
+**In main.py:**
+```python
+present_value(fv=500_000, r=0.07, n=5)
+# returns: 356,492.56
+```
+
+$\rightarrow$ Function: `present_value(fv, r, n)`
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
