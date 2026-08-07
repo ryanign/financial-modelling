@@ -61,7 +61,7 @@ A carbon credit project is contractually guaranteed to pay $500,000 in 5 years.
 An investor wants to buy that contract today.
 If the discount rate is 7%, what should they pay?
 
-$$PV = \frac{500{,}000}{(1.00 + 0.07)^{5}} = \$356{,}493$$
+$$PV = \frac{\$500{,}000}{(1.00 + 0.07)^{5}} = \$356{,}493$$
 
 Paying more than ~$365k for that contract means the investor is not earning their required 7% return.
 
@@ -79,6 +79,46 @@ present_value(fv=500_000, r=0.07, n=5)
 $\rightarrow$ Function: `present_value(fv, r, n)`
 
 ---
+
+## 3. Net Present Value (NPV)
+
+**Concept:**
+Real projects involve multiple cash flows at different points in time --
+an upfront cost, the a stream of revenues over years.
+NPV sums all of them after discounting each to today.
+
+$$NPV = \sum_{t=0}^{n} \frac{CF_t}{(1 + r)^{t}}$$
+
+Where:
+- $CF_t$ = cash flow at time $t$
+  - Negative = money going out (investment, costs)
+  - Positive = money coming in (revenue, savings)
+- $t = 0$ is today -- no discounting needed
+- $r$ = discount rate
+
+**Decision rule:**
+
+| NPV | Meaning | Decision |
+|-----|---------|----------|
+| $> 0$ | Investment creates value above required return | Accept |
+| $< 0$ | Investment destroys value | Reject |
+| $= 0$ | Investment excatly meets required return | Indifferent |
+
+**Real-world example:**
+A climate consultancy is evaluating whether to build a flood risk
+assessment platform. Costs and projected revenues:
+
+| Year | Cash Flow |
+|------|-----------|
+| 0 | -$200,000 (build the platform) |
+| 1 | +$60,000 (early clients) |
+| 2 | +$80,000 |
+| 3 | +$90,000 |
+| 4 | +$100,000 |
+
+Discount rate: 10%
+
+$$NPV = -200{,}000
 
 
 
