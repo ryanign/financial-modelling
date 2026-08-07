@@ -46,7 +46,7 @@ future_value(pv=100_000, r=0.08, n=3)
 # returns: 125971.20
 ```
 
-&#8594 Function: $future{_}value(pv, r, n)$
+-> Function: $future_value(pv, r, n)$
 
 ---
 
