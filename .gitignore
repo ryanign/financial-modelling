@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+fm-py312/
+.venv/
+venv/
+env/
+
+# uv
+.uv/
+
+# Data files (add exceptions below if needed)
+*.csv
+*.xlsx
+*.parquet
+
+# Jupyter (not used in this course, but just in case)
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables / secrets
+.env
+*.env
