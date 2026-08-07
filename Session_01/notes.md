@@ -28,7 +28,7 @@ A geothermal company sets aside $100,000 today into a reserve fund
 earning 8% annually, to cover future decommissioning costs in 3 years.
 How much will that fund be worth?
 
-```math
+```
 FV = \$100,000 * (1.00 + 0.08)^3
    = \$125,971.00
 ```
