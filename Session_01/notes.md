@@ -13,9 +13,7 @@ This seemingly simple idea is the foundation of almost every financial model.
 If you invest money today, it grows over time. Future Value answers:
 *"How much will my money be worth at a future date?"*
 
-```math
-FV = PV \times (1 + r)^n
-```
+$$FV = PV \times (1 + r)^n$$
 
 Where:
 - $PV$ = Present Value, the amount you start with today
@@ -28,10 +26,7 @@ A geothermal company sets aside $100,000 today into a reserve fund
 earning 8% annually, to cover future decommissioning costs in 3 years.
 How much will that fund be worth?
 
-```math
-FV = \$100,000 \times (1.00 + 0.08)^3
-   = \$125,971.00
-```
+$$FV = \$100,000 \times (1.00 + 0.08)^3 = \$125,971.00$$
 
 The company will have ~$126k available, enough to plan against.
 
@@ -46,7 +41,7 @@ future_value(pv=100_000, r=0.08, n=3)
 # returns: 125971.20
 ```
 
--> Function: $future_value(pv, r, n)$
+$\rightarrows$ Function: `future_value(pv, r, n)`
 
 ---
 
