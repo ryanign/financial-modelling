@@ -119,6 +119,30 @@ assessment platform. Costs and projected revenues:
 Discount rate: 10%
 
 $$NPV = -200{,}000
++ \frac{60{,}000}{(1.10)^{1}}
++ \frac{80{,}000}{(1.10)^{2}}
++ \frac{90{,}000}{(1.10)^{3}}
++ \frac{100{,}000}{(1.10)^{4}}$$
+
+$$NPV = \$-200{,}000 + \$54{,}545 + \$66{,}116 + \$67{,}618 + \$68{,}301 = +\$56{,}580 \quad \rightarrow \text{Accept}$$
+
+**Analogy:**
+NPV is a weighted sum where decays exponentially with time --
+identical to computing the weighted mean of a geophysical signal
+where older measurements carry less weight dur to instrument drift.
+
+**In main.py:**
+```python
+cash_flows = [-200_000, 60_000, 80_000, 90_000, 100_000]
+npv(rate=0.10, cash_flows=cash_flows)
+# returns: 56,580.38
+```
+
+$\rightarrow$ Function: `npv(rate, cash_flows)`
+Note: `cash_flows[0]` is period 0 (today). Pass the initial investment
+as a negative number.
+
+---
 
 
 
