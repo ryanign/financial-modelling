@@ -61,7 +61,7 @@ A carbon credit project is contractually guaranteed to pay $500,000 in 5 years.
 An investor wants to buy that contract today.
 If the discount rate is 7%, what should they pay?
 
-$$PV = \frac{\$500{,}000}{(1.00 + 0.07)^{5}} = \$356{,}493$$
+$$PV = \frac{500{,}000}{(1.00 + 0.07)^{5}} = 356{,}493$$
 
 Paying more than ~$365k for that contract means the investor is not earning their required 7% return.
 
@@ -118,13 +118,9 @@ assessment platform. Costs and projected revenues:
 
 Discount rate: 10%
 
-$$NPV = -200{,}000
-+ \frac{60{,}000}{(1.10)^{1}}
-+ \frac{80{,}000}{(1.10)^{2}}
-+ \frac{90{,}000}{(1.10)^{3}}
-+ \frac{100{,}000}{(1.10)^{4}}$$
+$$NPV = -200{,}000 + \frac{60{,}000}{(1.10)^{1}} + \frac{80{,}000}{(1.10)^{2}} + \frac{90{,}000}{(1.10)^{3}} + \frac{100{,}000}{(1.10)^{4}}$$
 
-$$NPV = \$-200{,}000 + \$54{,}545 + \$66{,}116 + \$67{,}618 + \$68{,}301 = +\$56{,}580 \quad \rightarrow \text{Accept}$$
+$$NPV = -200{,}000 + 54{,}545 + 66{,}116 + 67{,}618 + 68{,}301 = +56{,}580 \quad \rightarrow \text{Accept}$$
 
 **Analogy:**
 NPV is a weighted sum where decays exponentially with time --
@@ -167,7 +163,7 @@ The **hurdle rate** is the minimum return your organisation requires
 **Real-world example:**
 Using the same flood risk platform above:
 
-$$CF = [-200{,}000,\ 60{,}000, \80{,}000, \90{,}000, \100{,}000] \quad \Rightarrow \quad IRR \approx 22.8\%$$
+$$CF = [-200{,}000, 60{,}000, 80{,}000, 90{,}000, 100{,}000] \quad \Rightarrow \quad IRR \approx 22.8\%$$
 
 If the company's hurdle rate is 10%, IRR of 22.8% comfortably clears it.
 The platform is a viable investment.
@@ -205,7 +201,7 @@ A government signs a 10-year contract to pay a climate monitoring
 company $80,000 per year. The company's discount rate is 6%.
 What is that contract worth today?
 
-$$PV_{\text{annuity}} = 80{,}000 \times \frac{1 - (1.06)^(-10)}{0.06} = 80{,}000 \times 7.3601 = \$588{,}808$$
+$$PV_{\text{annuity}} = 80{,}000 \times \frac{1 - (1.06)^{-10}}{0.06} = 80{,}000 \times 7.3601 = 588{,}808$$
 
 The company can use this to decide the minimum contract value they would accept upfront as a lump sum instead.
 
@@ -362,7 +358,7 @@ This will be covered in Session 03 when we build a full DCF model.
 
 1. Read this file fully first
 2. Open `main.py` — read each function before running anything
-3. Run `python session_01/main.py` to see all outputs
+3. Run `python Session_01/main.py` to see all outputs
 4. **Write the functions yourself from scratch** in a separate file
    to test your understanding before moving to the exercise
 5. When ready: open `exercise.py`
