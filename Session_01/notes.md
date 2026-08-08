@@ -264,6 +264,116 @@ Note: always match the period of $r$ and $n$. Monthly contributions $\rightarrow
 
 ---
 
+## 7. Perpetuity
+
+**Concept:**
+A perpetuity is an annuity that pays forever.
+Counterintuitively, its present value is finite:
+
+$$PV_{\text{perpetuity}} = \frac{CF}{r}$$
+
+**Real-world example:**
+A conservation endowment fund needs to pay out $50,000 per year
+indefinitely to fund a coastal erosion monitoring programme.
+At a 5% return, how large must the endowment be?
+
+$$PV = \frac{50{,}000}{0.05} = \$1{,}000{,}000$$
+
+The fund must be $1 million to sustain the programme forever.
+
+**Why this matters in practice:**
+Perpetuity is used to estimate **terminal value** in DCF models —
+the value of a business beyond the explicit forecast period.
+We will apply this directly in Session 03.
+
+**In main.py:**
+```python
+pv_perpetuity(cf=50_000, r=0.05)
+# returns: 1,000,000.00
+```
+
+$\rightarrow$ Function: `pv_perpetuity(cf, r)`
+
+## 8. Discount Rate — What Should It Be?
+
+Choosing the right discount rate is where financial modelling
+requires judgement, not just calculation.
+
+| Context | Typical discount rate |
+|---------|----------------------|
+| Corporate investment | WACC — covered in Session 03 |
+| Personal decision | Your opportunity cost |
+| Government / infrastructure | Social discount rate (2–7%) |
+| Climate / long-horizon projects | Contested — see note below |
+
+**Note on climate projects:**
+The appropriate discount rate for long-horizon climate investments
+is genuinely disputed in economics. A high discount rate (say 10%)
+makes future climate damages appear small today — justifying inaction.
+A low rate (1–2%, as Stern argued) makes future damages appear large —
+justifying aggressive action now. This is not a technical question;
+it embeds ethical assumptions about how much we value future generations.
+
+For now, treat discount rate as a given input. We build it from
+first principles in Session 03 (WACC).
+
+**Where to find interest rates and discount rates in practice:**
+
+*Interest rates* — directly observable from markets:
+- Central bank policy rates: Bank Indonesia (bi.go.id), US Federal Reserve (federalreserve.gov)
+- Government bond yields — the most common proxy for the **risk-free rate**,
+  the baseline from which all other rates are built
+- Market data platforms: Yahoo Finance, Bloomberg, investing.com
+
+*Discount rates* — not observable, must be constructed:
+- For companies: calculated as WACC from the firm's capital structure (Session 03)
+- For personal decisions: your opportunity cost — the return you could
+  realistically earn in the next best alternative investment
+- For infrastructure and climate projects: social discount rate,
+  often specified by government guidelines or multilateral institutions (World Bank, ADB)
+
+**Note on inflation:**
+All rates and cash flows in this session are in *nominal* terms —
+they do not adjust for inflation. In practice, long-horizon models
+(infrastructure, energy, climate) must account for inflation explicitly,
+either by using real rates or by projecting nominal cash flows with
+category-specific inflation assumptions.
+This will be covered in Session 03 when we build a full DCF model.
+
+---
+
+## Key Terms
+
+| Term | Definition |
+|------|-----------|
+| Present Value ($PV$) | Today's value of a future cash flow |
+| Future Value ($FV$) | Value of today's amount at a future date |
+| Discount rate ($r$) | Rate used to convert future cash flows to present value |
+| $NPV$ | Sum of all discounted cash flows including initial investment |
+| $IRR$ | Discount rate that sets $NPV$ to zero |
+| Hurdle rate | Minimum acceptable return for an investment |
+| Annuity ($PV$) | Today's value of equal cash flows received over $n$ periods |
+| Annuity ($FV$) | Accumulated value of equal cash flows invested over $n$ periods |
+| Perpetuity | Equal cash flow repeated forever |
+
+---
+
+## Suggested Order for This Session
+
+1. Read this file fully first
+2. Open `main.py` — read each function before running anything
+3. Run `python session_01/main.py` to see all outputs
+4. **Write the functions yourself from scratch** in a separate file
+   to test your understanding before moving to the exercise
+5. When ready: open `exercise.py`
+
+---
+
+## What's Next
+Session 02 — Financial Statements
+We shift from single cash flows to reading how an entire company
+generates and deploys money over time.
+
 
 
 
